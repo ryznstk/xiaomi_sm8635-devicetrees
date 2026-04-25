@@ -2,6 +2,18 @@
 #include "cliffs-pm7550ba.dtsi"
 #include "peridot-pinctrl.dtsi"
 
+&pmxr2230_bcl {
+	qcom,defer-registration-until-zone = "mdmss-3";
+};
+
+&pm7550ba_bcl {
+	qcom,defer-registration-until-zone = "mdmss-3";
+};
+
+&bcl_soc {
+	qcom,defer-registration-until-zone = "xo-therm";
+};
+
 &tlmm {
 	mi_ts_int_init: mi_ts_int_init {
 		mux {
